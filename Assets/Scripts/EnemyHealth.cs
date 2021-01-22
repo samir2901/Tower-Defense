@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (health <= 0)
         {
+            PlayerStats.money += 10;
             Destroy(gameObject);
         }
     }    

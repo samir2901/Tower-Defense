@@ -5,7 +5,7 @@ public class BuildManager : MonoBehaviour
     public static BuildManager instance;
     public Vector3 positionOffset;
     public int totalAmountPresent = 100;
-
+    
     private void Awake()
     {
         Debug.Log("Amount Present : " + totalAmountPresent);
@@ -26,15 +26,24 @@ public class BuildManager : MonoBehaviour
         }
     }
 
+
+    public bool hasMoney
+    {
+        get
+        {
+            return PlayerStats.money >= turretToBuild.cost;
+        }
+    }
+
     public void buildTurretOn(Node node)
     {
         if (PlayerStats.money < turretToBuild.cost)
         {
             Debug.Log("NOT ENOUGH MONEY");
             return;
-        }
-        PlayerStats.money -= turretToBuild.cost;
-        Debug.Log(turretToBuild.turretPrefab.name + " : " + PlayerStats.money);
+        }        
+        PlayerStats.money -= turretToBuild.cost;        
+        //Debug.Log(turretToBuild.turretPrefab.name + " : " + PlayerStats.money);
         GameObject turret = Instantiate(turretToBuild.turretPrefab, node.transform.position + positionOffset, Quaternion.identity);
         node.turret = turret;
     }

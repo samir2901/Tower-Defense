@@ -110,3 +110,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.20990834, g: 0.509434, b: 0.11774654, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
+  turretPlacingParticleFX: {fileID: 8874184274587789454, guid: a3768c7cb5280674eaddff03c22de20a, type: 3}
+  turret: {fileID: 0}

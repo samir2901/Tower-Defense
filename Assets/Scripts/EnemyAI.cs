@@ -30,8 +30,14 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
+                DamagePlayer();
                 Destroy(gameObject);
             }
         }
+    }
+
+    void DamagePlayer()
+    {
+        PlayerStats.health -= 5;
     }
 }

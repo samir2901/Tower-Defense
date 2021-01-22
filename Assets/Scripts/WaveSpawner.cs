@@ -4,15 +4,17 @@ using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {
-    [SerializeField] private float timeBtwWaves = 2f;
+    [SerializeField] private float timeBtwWaves = 10f;
     [SerializeField] private GameObject enemyPrefab;
-    [SerializeField] private Transform spawnPoint;    
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private TextMeshProUGUI waveTimerText;
     private float currentTime;
     private float waveNumber = 0;
     // Start is called before the first frame update
     void Start()
     {
-        currentTime = timeBtwWaves;        
+        currentTime = timeBtwWaves;
+        waveTimerText.text = "Next wave\nin " + Mathf.RoundToInt(currentTime).ToString() + "s";
     }
 
     // Update is called once per frame
@@ -23,7 +25,8 @@ public class WaveSpawner : MonoBehaviour
             StartCoroutine(SpawnWave());
             currentTime = timeBtwWaves;
         }
-        currentTime = currentTime - Time.deltaTime;        
+        currentTime = currentTime - Time.deltaTime;
+        waveTimerText.text = "Next wave\nin " + Mathf.RoundToInt(currentTime).ToString() + "s";
     }
 
     IEnumerator SpawnWave()

@@ -5,6 +5,7 @@ public class Node : MonoBehaviour
 {    
     [SerializeField] private Color hoverColor;
     [SerializeField] private Vector3 positionOffset;
+    [SerializeField] private GameObject turretPlacingParticleFX;
     [HideInInspector]
     public GameObject turret;
     private Material nodeMat;
@@ -26,12 +27,14 @@ public class Node : MonoBehaviour
         if (!buildManager.canBuild)
         {
             return;
-        }
+        }        
         if (turret!=null)
         {
             Debug.Log("NO PLACE FOR A TURRET");
             return;
         }
+        GameObject particleFX = Instantiate(turretPlacingParticleFX, transform.position + positionOffset, Quaternion.identity);
+        Destroy(particleFX, 20);
         buildManager.buildTurretOn(this);
     }
 
@@ -45,7 +48,15 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        nodeMat.color = hoverColor;        
+        if (buildManager.hasMoney)
+        {
+            nodeMat.color = hoverColor;
+        }
+        else
+        {
+            nodeMat.color = Color.red;
+        }
+        
     }
 
     private void OnMouseExit()
