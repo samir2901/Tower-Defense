@@ -15430,6 +15430,7 @@ GameObject:
   - component: {fileID: 1823199644}
   - component: {fileID: 1823199645}
   - component: {fileID: 1823199646}
+  - component: {fileID: 1823199647}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -15478,7 +15479,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0e41b3a2b1d4c498c9572b7e6d74f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positionOffset: {x: 0, y: 0.5, z: 0}
   totalAmountPresent: 100
+--- !u!114 &1823199647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823199643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b729fdbe8f6e242b2489fe16756c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 100
 --- !u!1001 &1823239872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18352,17 +18367,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1248931874}
     m_Modifications:
     - target: {fileID: -8591954114132351793, guid: 6a9531d4a4786704c8fe3cb0fd408319, type: 3}
-      propertyPath: standardTurret.turretPrefab
-      value: 
-      objectReference: {fileID: 54622964558378639, guid: 9f17494a4d6d99545a6d8353fe80a7d3, type: 3}
+      propertyPath: standardTurret.cost
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -8591954114132351793, guid: 6a9531d4a4786704c8fe3cb0fd408319, type: 3}
-      propertyPath: missileLauncher.turretPrefab
-      value: 
-      objectReference: {fileID: 6460667607370177044, guid: af6151b40c0de4743a8e354e1a8a8ac0, type: 3}
+      propertyPath: missileLauncher.cost
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: -8591954114132351793, guid: 6a9531d4a4786704c8fe3cb0fd408319, type: 3}
-      propertyPath: turretWithPanel.turretPrefab
-      value: 
-      objectReference: {fileID: 16069396955830878, guid: 83c7a6142b0f7694b8b0ff8e70308296, type: 3}
+      propertyPath: turretWithPanel.cost
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 463745881, guid: 6a9531d4a4786704c8fe3cb0fd408319, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -18465,7 +18480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8673140001660072876, guid: 6a9531d4a4786704c8fe3cb0fd408319, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.49206543
+      value: -0.49169922
       objectReference: {fileID: 0}
     - target: {fileID: 8673140001660072876, guid: 6a9531d4a4786704c8fe3cb0fd408319, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

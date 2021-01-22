@@ -5,7 +5,8 @@ public class Node : MonoBehaviour
 {    
     [SerializeField] private Color hoverColor;
     [SerializeField] private Vector3 positionOffset;
-    private GameObject turret;
+    [HideInInspector]
+    public GameObject turret;
     private Material nodeMat;
     private Color defaultColor;
     private BuildManager buildManager;
@@ -22,7 +23,7 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        if (buildManager.getTurretToBuild()==null)
+        if (!buildManager.canBuild)
         {
             return;
         }
@@ -31,9 +32,7 @@ public class Node : MonoBehaviour
             Debug.Log("NO PLACE FOR A TURRET");
             return;
         }
-        GameObject turretToBuild = buildManager.getTurretToBuild();
-        Vector3 pos = transform.position + positionOffset;
-        turret = Instantiate(turretToBuild, pos, Quaternion.identity);
+        buildManager.buildTurretOn(this);
     }
 
     private void OnMouseEnter()
@@ -42,7 +41,7 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        if (buildManager.getTurretToBuild() == null)
+        if (!buildManager.canBuild)
         {
             return;
         }

@@ -18,19 +18,19 @@ public class Shop : MonoBehaviour
     }
     public void GetStandardTurret()
     {
-        Debug.Log("Standard Turret Purchased");
-        buildManager.setTurretToBuild(standardTurret.turretPrefab);
+        Debug.Log("Standard Turret Selected");
+        buildManager.setTurretToBuild(standardTurret);
     }
 
     public void GetPanelTurret()
     {
-        Debug.Log("Panel Turret Purchased");
-        buildManager.setTurretToBuild(turretWithPanel.turretPrefab);
+        Debug.Log("Panel Turret Selected");
+        buildManager.setTurretToBuild(turretWithPanel);
     }
 
     public void GetMissleTurret()
     {
-        Debug.Log("Panel Turret Purchased");
-        buildManager.setTurretToBuild(missileLauncher.turretPrefab);
+        Debug.Log("Panel Turret Selected");
+        buildManager.setTurretToBuild(missileLauncher);
     }
 }
