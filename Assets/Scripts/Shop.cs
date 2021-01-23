@@ -12,6 +12,8 @@ public class Shop : MonoBehaviour
     private TurretBlueprint turretWithPanel;
     [SerializeField]
     private TurretBlueprint missileLauncher;
+    [SerializeField]
+    private TurretBlueprint laserTurret;
 
     [Header("Shop Prices")]
     [SerializeField]
@@ -20,6 +22,8 @@ public class Shop : MonoBehaviour
     private TextMeshProUGUI panelTurretCostText;
     [SerializeField]
     private TextMeshProUGUI missileLauncherCostText;
+    [SerializeField]
+    private TextMeshProUGUI laserTurretCostText;
 
     BuildManager buildManager;
     private void Start()
@@ -28,6 +32,7 @@ public class Shop : MonoBehaviour
         SetCost(standardTurretCostText, standardTurret);
         SetCost(panelTurretCostText, turretWithPanel);
         SetCost(missileLauncherCostText, missileLauncher);
+        SetCost(laserTurretCostText, laserTurret);
     }
     public void GetStandardTurret()
     {
@@ -45,6 +50,12 @@ public class Shop : MonoBehaviour
     {
         Debug.Log("Panel Turret Selected");
         buildManager.setTurretToBuild(missileLauncher);
+    }
+
+    public void GetLaserTurret()
+    {
+        Debug.Log("Panel Turret Selected");
+        buildManager.setTurretToBuild(laserTurret);
     }
 
     void SetCost(TextMeshProUGUI textMesh, TurretBlueprint turret)

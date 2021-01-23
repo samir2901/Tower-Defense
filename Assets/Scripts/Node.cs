@@ -34,7 +34,7 @@ public class Node : MonoBehaviour
             return;
         }
         GameObject particleFX = Instantiate(turretPlacingParticleFX, transform.position + positionOffset, Quaternion.identity);
-        Destroy(particleFX, 20);
+        Destroy(particleFX, 5);
         buildManager.buildTurretOn(this);
     }
 
