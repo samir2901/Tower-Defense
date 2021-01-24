@@ -71,11 +71,11 @@ public class Turret : MonoBehaviour
                 {
                     laser.enabled = false;
                     laserShootEffect.Stop();
-                    laserHitEffect.Stop();
+                    laserHitEffect.Stop();                    
                 }
             }
             return;
-        }
+        }        
 
         LockOnTarget();
 
@@ -90,7 +90,7 @@ public class Turret : MonoBehaviour
         else
         {
             ShootLaser();
-        }
+        } 
         
     }
 
@@ -102,9 +102,11 @@ public class Turret : MonoBehaviour
             laserShootEffect.Play();
             laserHitEffect.Play();            
         }
+        
         laser.SetPosition(0, firePoint.position);
         laser.SetPosition(1, target.position);
         laserHitEffect.transform.position = target.position;
+        target.GetComponent<EnemyAI>().speed = 1f;
         target.GetComponent<EnemyHealth>().health -= damageAmount;
     }
 

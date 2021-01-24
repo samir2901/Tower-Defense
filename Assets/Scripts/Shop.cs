@@ -36,25 +36,25 @@ public class Shop : MonoBehaviour
     }
     public void GetStandardTurret()
     {
-        Debug.Log("Standard Turret Selected");
+        //Debug.Log("Standard Turret Selected");
         buildManager.setTurretToBuild(standardTurret);
     }
 
     public void GetPanelTurret()
     {
-        Debug.Log("Panel Turret Selected");
+        //Debug.Log("Panel Turret Selected");
         buildManager.setTurretToBuild(turretWithPanel);
     }
 
     public void GetMissleTurret()
     {
-        Debug.Log("Panel Turret Selected");
+        //Debug.Log("Missle Turret Selected");
         buildManager.setTurretToBuild(missileLauncher);
     }
 
     public void GetLaserTurret()
     {
-        Debug.Log("Panel Turret Selected");
+        //Debug.Log("Laser Turret Selected");
         buildManager.setTurretToBuild(laserTurret);
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;
+    public float speed = 10f;
     private Transform target;
     private int wayPointIndex;
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {        
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         Vector3 dir = target.position - transform.position;
         float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;

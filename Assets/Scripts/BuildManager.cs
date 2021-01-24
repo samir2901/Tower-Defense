@@ -3,12 +3,10 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
-    public Vector3 positionOffset;
-    public int totalAmountPresent = 100;
+    public Vector3 positionOffset;    
     
     private void Awake()
-    {
-        Debug.Log("Amount Present : " + totalAmountPresent);
+    {        
         if (instance!=null)
         {
             Debug.LogError("More than one Build Manager in scene");
