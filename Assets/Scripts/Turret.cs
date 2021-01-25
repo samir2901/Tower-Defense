@@ -19,6 +19,7 @@ public class Turret : MonoBehaviour
     [SerializeField] private LineRenderer laser;
     [SerializeField] private ParticleSystem laserShootEffect;
     [SerializeField] private ParticleSystem laserHitEffect;
+    [SerializeField] private float slowDownSpeed = 5f;
 
 
 
@@ -106,7 +107,7 @@ public class Turret : MonoBehaviour
         laser.SetPosition(0, firePoint.position);
         laser.SetPosition(1, target.position);
         laserHitEffect.transform.position = target.position;
-        target.GetComponent<EnemyAI>().speed = 1f;
+        target.GetComponent<EnemyAI>().speed = slowDownSpeed;
         target.GetComponent<EnemyHealth>().health -= damageAmount;
     }
 
