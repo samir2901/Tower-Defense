@@ -49,7 +49,7 @@ MonoBehaviour:
   firePoint: {fileID: 8809649628943511311}
   range: 11.78
   turnSpeed: 10
-  damageAmount: 5
+  damageAmount: 6
   fireRate: 2
   bulletPrefab: {fileID: 1936927112543939974, guid: 040fbc914f63c9e49abb5f3ddb3e3a4f, type: 3}
   shootParticles: {fileID: 1024634676084307491}
@@ -57,6 +57,7 @@ MonoBehaviour:
   laser: {fileID: 0}
   laserShootEffect: {fileID: 0}
   laserHitEffect: {fileID: 0}
+  slowDownSpeed: 5
 --- !u!1 &129648713445737801
 GameObject:
   m_ObjectHideFlags: 0

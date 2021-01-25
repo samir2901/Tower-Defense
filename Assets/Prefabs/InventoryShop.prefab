@@ -1119,16 +1119,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurret:
     turretPrefab: {fileID: 54622964558378639, guid: 9f17494a4d6d99545a6d8353fe80a7d3, type: 3}
-    cost: 100
+    cost: 150
   turretWithPanel:
     turretPrefab: {fileID: 16069396955830878, guid: 83c7a6142b0f7694b8b0ff8e70308296, type: 3}
-    cost: 200
+    cost: 350
   missileLauncher:
     turretPrefab: {fileID: 6460667607370177044, guid: af6151b40c0de4743a8e354e1a8a8ac0, type: 3}
-    cost: 350
+    cost: 400
   laserTurret:
     turretPrefab: {fileID: 6819960186402214372, guid: d122ff6e053a3bd41b3c09ddcb12ce63, type: 3}
-    cost: 500
+    cost: 600
   standardTurretCostText: {fileID: 339502795}
   panelTurretCostText: {fileID: 1929565623}
   missileLauncherCostText: {fileID: 410752974}

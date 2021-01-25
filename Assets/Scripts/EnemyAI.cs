@@ -9,9 +9,27 @@ public class EnemyAI : MonoBehaviour
     private int wayPointIndex;
     // Start is called before the first frame update
     void Start()
-    {
+    {        
+        Timer timer = GameObject.Find("GameManager").GetComponent<Timer>();
+        if (timer.timer <= 300)
+        {
+            speed = speed + 2.3f;
+        }
+        else if(timer.timer <= 200)
+        {
+            speed = speed + 4.5f;
+        }
+        else if (timer.timer <= 200)
+        {
+            speed = speed + 5f;
+        }
+        else if(timer.timer <= 100)
+        {
+            speed = speed + 7f;
+        }
         wayPointIndex = 0;
         target = Waypoints.wayPoints[wayPointIndex];
+        //Debug.Log(this.name + " : " + "speed = " + speed);
     }
 
     // Update is called once per frame
@@ -39,5 +57,9 @@ public class EnemyAI : MonoBehaviour
     void DamagePlayer()
     {
         PlayerStats.health -= 5;
+        if (PlayerStats.money>0)
+        {
+            PlayerStats.money -= 10;
+        }        
     }
 }

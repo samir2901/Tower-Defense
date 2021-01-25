@@ -141,6 +141,7 @@ MonoBehaviour:
   laser: {fileID: 3901980962583876407}
   laserShootEffect: {fileID: 7105314798629691600}
   laserHitEffect: {fileID: 6679101067531987823}
+  slowDownSpeed: 15
 --- !u!120 &3901980962583876407
 LineRenderer:
   m_ObjectHideFlags: 0

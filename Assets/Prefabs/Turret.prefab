@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axisToRotate: {fileID: 865648365425373573}
   firePoint: {fileID: 2318495299038605577}
-  range: 10
+  range: 12
   turnSpeed: 10
   damageAmount: 1
   fireRate: 10
@@ -57,6 +57,7 @@ MonoBehaviour:
   laser: {fileID: 0}
   laserShootEffect: {fileID: 0}
   laserHitEffect: {fileID: 0}
+  slowDownSpeed: 5
 --- !u!1 &87682283764394392
 GameObject:
   m_ObjectHideFlags: 0
