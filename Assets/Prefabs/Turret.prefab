@@ -50,11 +50,13 @@ MonoBehaviour:
   range: 10
   turnSpeed: 10
   damageAmount: 1
-  fireRate: 2
+  fireRate: 10
   bulletPrefab: {fileID: 1936927112543939974, guid: 040fbc914f63c9e49abb5f3ddb3e3a4f, type: 3}
   shootParticles: {fileID: 6970511909359880690}
   useLaser: 0
   laser: {fileID: 0}
+  laserShootEffect: {fileID: 0}
+  laserHitEffect: {fileID: 0}
 --- !u!1 &87682283764394392
 GameObject:
   m_ObjectHideFlags: 0

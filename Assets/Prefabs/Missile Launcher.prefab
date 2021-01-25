@@ -241,15 +241,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9184401310f331747872738ada7b86b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretCost: 50
   axisToRotate: {fileID: 3225808240869790092}
   firePoint: {fileID: 6342821006090242138}
-  bulletPrefab: {fileID: 1806699708834046075, guid: 02a5fdf80911667468e7880b8ab05515, type: 3}
-  shootParticles: {fileID: 1161100837038824676}
   range: 11.16
   turnSpeed: 10.54
+  damageAmount: 10
   fireRate: 1
-  damageAmount: 5
+  bulletPrefab: {fileID: 1806699708834046075, guid: 02a5fdf80911667468e7880b8ab05515, type: 3}
+  shootParticles: {fileID: 1161100837038824676}
+  useLaser: 0
+  laser: {fileID: 0}
+  laserShootEffect: {fileID: 0}
+  laserHitEffect: {fileID: 0}
 --- !u!1 &7408169579269713922
 GameObject:
   m_ObjectHideFlags: 0
